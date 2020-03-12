@@ -8,17 +8,30 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       date: {
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
+      },
+      temperature: {
+        type: DataTypes.DECIMAL,
         allowNull: false,
         validate: {
-          len: [1]
-        }
+            len: [1,6]
+          }
       },
-      body: {
-        type: DataTypes.TEXT,
+      PH: {
+        type: DataTypes.DECIMAL,
         allowNull: false,
-        len: [1]
-      }
+        validate: {
+            len: [1,6]
+          }
+      },
+      salinity: {
+        type: DataTypes.DECIMAL,
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+
     });
   
     // Exhibit.associate = function(models) {
