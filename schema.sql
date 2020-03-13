@@ -1,4 +1,4 @@
--- Drops the file fish if it exists currently --
-DROP DATABASE IF EXISTS file_fish_db;
--- Creates the file fish database --
-CREATE DATABASE file_fish_db;
+-- Drops the passport_demo if it exists currently --
+DROP DATABASE IF EXISTS passport_demo;
+-- Creates the passport_demo database --
+CREATE DATABASE passport_demo;
