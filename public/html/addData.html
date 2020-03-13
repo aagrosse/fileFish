@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Add information to current Exhibit</h1>
+                <p class="lead">
+                    Select a database
+                </p>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Select an exhibit to add data
+                    </button>
+                    <div class="dropdown-menu">
+
+                        {{#each exhibits}}
+
+                        <a class="dropdown-item" href="#">
+                            {{name}}
+                        </a>
+                        <div class="dropdown-divider"></div>
+
+                        {{/each}}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="../js/" async defer></script>
+</body>
+
+</html>

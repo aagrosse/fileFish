@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Abc!1234",
-    "database": "passport_demo",
+    "password": "root",
+    "database": "file_fish_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
