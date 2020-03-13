@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     const Exhibit = sequelize.define("Exhibit", {
-      designation: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -11,26 +11,74 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.DATE,
       },
       temperature: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(6,1),
         allowNull: false,
-        validate: {
-            len: [1,6]
-          }
+        
       },
       PH: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(10,1),
         allowNull: false,
         validate: {
             len: [1,6]
           }
       },
       salinity: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(10,1),
         allowNull: false,
         validate: {
             len: [1,6]
           }
       },
+      disolvedOxygen: {
+        type: DataTypes.DECIMAL(10,1),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      alkalinity: {
+        type: DataTypes.DECIMAL(10,1),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      ammonia: {
+        type: DataTypes.DECIMAL(10,1),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      nitrite: {
+        type: DataTypes.DECIMAL(10,1),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      nitrate: {
+        type: DataTypes.DECIMAL(10,1),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      iodine: {
+        type: DataTypes.DECIMAL(10,2),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+      calcium: {
+        type: DataTypes.DECIMAL(10,0),
+        allowNull: false,
+        validate: {
+            len: [1,6]
+          }
+      },
+
 
     });
   
