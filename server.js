@@ -43,6 +43,9 @@ require("./config/passport.js");
 // routes
 require("./routes/handlebars-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/exhibit-api-routes.js")(app);
+require("./routes/name-api-routes.js")(app);
+
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ force: false }).then(function() {
