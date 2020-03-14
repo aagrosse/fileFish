@@ -9,7 +9,7 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 
 // Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8000;
+var PORT = process.env.PORT || 8030;
 var db = require("./models");
 // console.log(typeof db.User);
 
@@ -21,7 +21,7 @@ app.use(
 	session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
 
-// middleware for bodyparser;
+// middleware for bodyParser;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -40,12 +40,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 require("./config/passport.js");
-
+// routes
 require("./routes/handlebars-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
 	app.listen(PORT, function() {
 		console.log(
 			"==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
