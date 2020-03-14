@@ -1,15 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Exhibit = sequelize.define("Exhibit", {
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1,6]
-        }
-      },
-      date: {
-        type: DataTypes.DATE,
-      },
+    const Exhibits = sequelize.define("Exhibits", {
       temperature: {
         type: DataTypes.DECIMAL(6,1),
         allowNull: false,
@@ -82,16 +72,16 @@ module.exports = function(sequelize, DataTypes) {
 
     });
   
-    // Exhibit.associate = function(models) {
-    //   // We're saying that a Post should belong to an Author
-    //   // A Post can't be created without an Author due to the foreign key constraint
-    //   Post.belongsTo(models.Author, {
-    //     foreignKey: {
-    //       allowNull: false
-    //     }
-    //   });
-    // };
+    Exhibits.associate = function(models) {
+      // We're saying that a Exhibits should belong to a Name
+      // A Exhibit can't be created without a name due to the foreign key constraint
+      Exhibits.belongsTo(models.Names, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
   
-    return Exhibit;
+    return Exhibits;
   };
   
