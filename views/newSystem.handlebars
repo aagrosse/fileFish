@@ -1,7 +1,7 @@
 <div class="header">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">EXHIBITS</h1>
+            <h1 class="display-4">Manage Your Systems</h1>
             <p class="lead">
 
             </p>
@@ -11,63 +11,38 @@
 
 
 </div>
-
-
-
-<div class="card">
-    <div class="card-header">
-        Create a new Exhibit
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Enter the parameters of your exhibit</h5>
-
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Enter the name of the Exhibit:</span>
-            </div>
-            <input id="exhibit_name" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
+ <div class="card card-body col-md-10 offset-md-1">
+   <div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="name-container">
+					<h1>Systems</h1>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th># of Entries</th>
+								<th>See Systems's Entries</th>
+								<th>Add Data</th>
+								<th>Delete System</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="form-row">
+								<form id="name-form">
+									<td colspan="4">
+										<input placeholder="Enter a system name" id="name" type="text" />
+									</td>
+									<td><button type="submit" class="btn btn-success">Create System</button>
+									</td>
+								</form>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
         </div>
 
 
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Temperature (Fº):</span>
-            </div>
-            <input id="temp" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
-        </div>
 
-
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">PH:</span>
-            </div>
-            <input id="ph" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
-        </div>
-
-
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Specific gravity (PPT):</span>
-            </div>
-            <input id="gravity" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
-        </div>
-
-
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Dissolved Oxygen</span>
-            </div>
-            <input id="oxygen" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
-        </div>
-
-
-    </div>
-</div>
-
-
-<script src="../js/" async defer></script>
+<script src="public/js/newSystem.js" async defer></script>

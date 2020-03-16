@@ -126,3 +126,18 @@ button {
 h2 {
   color: silver;
 }
+
+.butt {
+  color: white;
+}
+
+.card {
+  background-color: rgb(181, 229, 233);
+  border-radius: 10px;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 1px rgba(0, 0, 0, 0.19);
+  margin-bottom: 50px;
+}
+
+.input-group-text {
+  min-width: 10px;
+}
