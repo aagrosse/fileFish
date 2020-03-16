@@ -1,8 +1,17 @@
-/* form.signup, */
-form.login {
-  margin-top: 50px;
+/* main body  ===================================================================*/
+nav {
+  background-color: black;
+  height: 60px;
+  padding-top: 18px;
+  opacity: 80%;
+  border-top: solid blue 5px;
+  border-left: solid blue 5px;
+  border-right: solid blue 5px;
 }
-/* landing page  */
+.nav-link {
+  float: right;
+  margin: 10px;
+}
 
 body {
   background-image: url(https://wiswimacademy.com/wp-content/uploads/2016/09/iStock_78650427_XLARGE.jpg);
@@ -13,10 +22,11 @@ body {
   border: solid 5px blue;
   opacity: 70%;
   color: black;
-
   font-family: "Times New Roman", Times, serif;
 }
-
+h6 {
+  font-size: large;
+}
 .card {
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
@@ -43,6 +53,7 @@ body {
   margin-right: auto;
   width: 50%;
 }
+/* member.html ================================================================================*/
 .card-title {
   color: silver;
   text-align: center;
@@ -56,63 +67,29 @@ body {
 }
 .card-body {
   color: silver;
+  padding: 24px;
+  margin-right: 0px;
 }
 
-.card-0 {
-  float: left;
-  margin: 100px;
-  background-color: black;
-  border-radius: 10px;
-}
 .card-1 {
   float: left;
-  margin: 100px;
-  background-color: black;
-  border-radius: 10px;
-}
-.card-2 {
-  float: left;
-  margin: 100px;
+  margin: 120px;
   background-color: black;
   border-radius: 10px;
 }
 
 img {
-  height: 120px;
+  height: 160px;
   width: 180px;
   border-radius: 10px;
+  margin-left: 30px;
 }
 
 button {
-  margin-left: 60px;
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .card-0 {
-    margin-left: 100px;
-  }
-  .card-1 {
-    margin-left: 30px;
-  }
-  .card-2 {
-    margin-left: 270px;
-  }
-}
-
-@media (max-width: 640px) {
-  .card-0 {
-    margin-left: 50px;
-  }
-
-  .card-1 {
-    margin-left: 50px;
-  }
-
-  .card-2 {
-    margin-left: 50px;
-  }
-}
-/* sign up form */
+/* sign up form ===================================== */
 
 .container-signUp {
   background-color: black;
@@ -128,17 +105,19 @@ h2 {
   color: silver;
 }
 
-.butt {
-  color: white;
+/* Responsiveness =============================================================*/
+
+@media (max-width: 768px) {
+  .card-1 {
+    margin: 65px;
+  }
+  .container-signUp {
+    padding: 30px;
+  }
 }
 
-.card {
-  background-color: rgb(181, 229, 233);
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 1px rgba(0, 0, 0, 0.19);
-  margin-bottom: 50px;
-}
-
-.input-group-text {
-  min-width: 10px;
+@media (max-width: 640px) {
+  .card-1 {
+    margin-left: 40px;
+  }
 }
