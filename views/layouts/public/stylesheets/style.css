@@ -27,7 +27,8 @@ body {
 h6 {
   font-size: large;
 }
-/* .card {
+
+.card {
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
@@ -45,14 +46,15 @@ h6 {
 .logo {
   margin-top: 20px;
   max-height: 150px;
+  max-width: 200px;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%; 
-} *?
+  width: 50%;
+}
 /* member.html ================================================================================*/
 .card-title {
   color: silver;
@@ -88,6 +90,7 @@ img {
 button {
   width: 100%;
 }
+
 /* sign up form ===================================== */
 
 .container-signUp {
@@ -119,35 +122,4 @@ h2 {
   .card-1 {
     margin-left: 40px;
   }
-}
-/* sign up form */
-
-.container-signUp {
-  background-color: black;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 10px;
-  color: silver;
-  opacity: 80%;
-  border-radius: 10px;
-}
-h2 {
-  color: silver;
-}
-
-.button {
-  color: white;
-}
-
-.card {
-  background-color: rgb(181, 229, 233);
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
-  margin-bottom: 50px;
-}
-
-.input-group-text {
-  min-width: 10px;
 }
