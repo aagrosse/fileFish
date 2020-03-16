@@ -1,8 +1,17 @@
-/* form.signup, */
-form.login {
-  margin-top: 50px;
+/* main body =================================================================== */
+nav {
+  background-color: black;
+  height: 60px;
+  padding-top: 18px;
+  opacity: 80%;
+  border-top: solid blue 5px;
+  border-left: solid blue 5px;
+  border-right: solid blue 5px;
 }
-/* member.html page  */
+.nav-link {
+  float: right;
+  margin: 10px;
+}
 
 body {
   background-image: url(https://wiswimacademy.com/wp-content/uploads/2016/09/iStock_78650427_XLARGE.jpg);
@@ -15,8 +24,10 @@ body {
   color: black;
   font-family: "Times New Roman", Times, serif;
 }
-
-/* .card {
+h6 {
+  font-size: large;
+}
+.card {
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
@@ -41,7 +52,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-} */
+}
+/* member.html ================================================================================*/
 .card-title {
   color: silver;
   text-align: center;
@@ -55,9 +67,8 @@ body {
 }
 .card-body {
   color: silver;
-  padding: 24px; 
+  padding: 24px;
   margin-right: 0px;
-  
 }
 
 .card-1 {
@@ -74,22 +85,11 @@ img {
   margin-left: 30px;
 }
 
-button{
+button {
   width: 100%;
 }
-@media (max-width: 768px) {
- 
-  .card-1 {
-  margin: 65px; 
-}
 
-@media (max-width: 640px) {
-  .card-1 {
-    margin-left: 40px;
-  }
-}
-
-/* sign up form */
+/* sign up form ===================================== */
 
 .container-signUp {
   background-color: black;
@@ -103,4 +103,21 @@ button{
 }
 h2 {
   color: silver;
+}
+
+/* Responsiveness =============================================================*/
+
+@media (max-width: 768px) {
+  .card-1 {
+    margin: 65px;
+  }
+  .container-signUp {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-1 {
+    margin-left: 40px;
+  }
 }
