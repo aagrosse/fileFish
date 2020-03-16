@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* main body  ===================================================================*/
-=======
 /* handle bars css stylesheet */ /* main body =================================================================== */
->>>>>>> branch1
 nav {
   background-color: black;
   height: 60px;
@@ -31,11 +27,8 @@ body {
 h6 {
   font-size: large;
 }
-<<<<<<< HEAD
+
 .card {
-=======
-/* .card {
->>>>>>> branch1
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
@@ -53,19 +46,15 @@ h6 {
 .logo {
   margin-top: 20px;
   max-height: 150px;
+  max-width: 200px;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-<<<<<<< HEAD
   width: 50%;
 }
-=======
-  width: 50%; 
-} *?
->>>>>>> branch1
 /* member.html ================================================================================*/
 .card-title {
   color: silver;
@@ -100,47 +89,9 @@ img {
 
 button {
   width: 100%;
-<<<<<<< HEAD
-=======
 }
+
 /* sign up form ===================================== */
-
-.container-signUp {
-  background-color: black;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 10px;
-  color: silver;
-  opacity: 80%;
-  border-radius: 10px;
->>>>>>> branch1
-}
-h2 {
-  color: silver;
-}
-
-/* Responsiveness =============================================================*/
-
-<<<<<<< HEAD
-/* sign up form ===================================== */
-=======
-@media (max-width: 768px) {
-  .card-1 {
-    margin: 65px;
-  }
-  .container-signUp {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 640px) {
-  .card-1 {
-    margin-left: 40px;
-  }
-}
-/* sign up form */
->>>>>>> branch1
 
 .container-signUp {
   background-color: black;
@@ -156,7 +107,6 @@ h2 {
   color: silver;
 }
 
-<<<<<<< HEAD
 /* Responsiveness =============================================================*/
 
 @media (max-width: 768px) {
@@ -172,20 +122,4 @@ h2 {
   .card-1 {
     margin-left: 40px;
   }
-=======
-.button {
-  color: white;
-}
-
-.card {
-  background-color: rgb(181, 229, 233);
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
-  margin-bottom: 50px;
-}
-
-.input-group-text {
-  min-width: 10px;
->>>>>>> branch1
 }
