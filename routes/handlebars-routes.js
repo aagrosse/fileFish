@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
-var path = require("path");
+const path = require("path");
+const express = require('express');
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -29,4 +30,23 @@ module.exports = function(app) {
 	app.get("/members", isAuthenticated, function(req, res) {
 		res.render("members");
 	});
+
+	// routing to new system page
+	app.get("/newSystem", function(req, res) {
+		res.render("newSystem");
+	});
+
+	// routing to add Data page
+	app.get("/addData", function(req, res) {
+		res.render("addData");
+	});
+
+	// routing to add Data page
+	app.get("/searchData", function(req, res) {
+		res.render("searchData");
+	});
+
+	app.use("/public", express.static('public'));
+
+	
 };
