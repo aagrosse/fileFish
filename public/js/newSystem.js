@@ -44,7 +44,7 @@ $(document).ready(function() {
       }
       newTr.append("<td><a href='/searchData?NameId=" + nameData.id + "'>Go to Data</a></td>");
       newTr.append("<td><a href='/addData?NameId=" + nameData.id + "'>Add Data</a></td>");
-      newTr.append("<td><a style='cursor:pointer;color:red' class='delete-name'>Delete Name</a></td>");
+      newTr.append("<td><a style='cursor:pointer;color:red' class='delete-name'>Delete System</a></td>");
       return newTr;
     }
   

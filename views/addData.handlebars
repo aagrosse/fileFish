@@ -2,43 +2,113 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Add information to current Exhibit</h1>
-            <p class="lead">
-                Select a database
-            </p>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Select an exhibit to add data
-                </button>
-                <div class="dropdown-menu">
-
-                    {{#each exhibits}}
-
-                    <a class="dropdown-item" href="#">
-                        {{name}}
-                    </a>
-                    <div class="dropdown-divider"></div>
-
-                    {{/each}}
-
-                </div>
-            </div>
-
+            
+    <div class="card-body center">
+            <div class="form-group">
+							<label for="category">Select System:</label>
+							<select class="custom-select" id="designation">
+  						</select>
+			</div>
+</div>
         </div>
     </div>
 </div>
 
-<div class="card">
-    <div class="card-header">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Enter the parameters of your exhibit</h5>
+    <div class="card card-body center">
+        <h5 class="card-title">Enter the parameters of your system</h5>
+    <div class=" center">
+    <form id="addData">
+    <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Temperature (Fº):</span>
+            
+            </div>
+            <input id="temp" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
 
-    </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">PH:</span>
+            </div>
+            <input id="ph" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Specific gravity (PPT):</span>
+            </div>
+            <input id="salinity" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Dissolved Oxygen</span>
+            </div>
+            <input id="do" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Alkalinity</span>
+            </div>
+            <input id="alkalinity" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Ammonnia</span>
+            </div>
+            <input id="ammonia" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nitrite</span>
+            </div>
+            <input id="nitrite" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nitrate</span>
+            </div>
+            <input id="nitrate" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Iodine</span>
+            </div>
+            <input id="iodine" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+      <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Calcium</span>
+            </div>
+            <input id="calcium" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <button type="submit" class="btn btn-success submit center">Submit</button>
+</div>
+</form>
+</div>
 </div>
 
 
 
 
-<script src="../js/" async defer></script>
+
+<script src="public/js/addData.js" async defer></script>
