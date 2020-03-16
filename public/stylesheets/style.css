@@ -1,41 +1,41 @@
-/* form.signup,
+form.signup,
 form.login {
-  margin-top: 50px;
+	margin-top: 50px;
 }
-/* landing page 
+
+/* landing page  */
 
 body {
-  background-image: url(https://singularityhub.com/wp-content/uploads/2019/08/clear-concept-underwater-ocean-floor-perspectives-shutterstock-1422884786.jpg);
+	background-image: url("https://singularityhub.com/wp-content/uploads/2019/08/clear-concept-underwater-ocean-floor-perspectives-shutterstock-1422884786.jpg");
 }
 .jumbotron {
-  text-align: center;
-  background-color: aqua;
+	text-align: center;
+	background-color: aqua;
 }
 
 .card {
-  background-color: rgb(181, 229, 233);
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 1px rgba(0, 0, 0, 0.19);
-
+	background-color: rgb(181, 229, 233);
+	border-radius: 10px;
+	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
-.card2{
-  float:left;
+.card2 {
+	float: left;
 }
 
-.card3{
-  float:right;
+.card3 {
+	float: right;
 }
 
-.logo{
-  margin-top: 20px;
-  max-height: 150px;
-  
+.logo {
+	margin-top: 20px;
+	max-height: 150px;
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-} */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
