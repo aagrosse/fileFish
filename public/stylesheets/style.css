@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* main body  ===================================================================*/
-=======
 /* handle bars css stylesheet */ /* main body =================================================================== */
->>>>>>> branch1
 nav {
   background-color: black;
   height: 60px;
@@ -31,11 +27,7 @@ body {
 h6 {
   font-size: large;
 }
-<<<<<<< HEAD
 .card {
-=======
-/* .card {
->>>>>>> branch1
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
@@ -59,13 +51,8 @@ h6 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-<<<<<<< HEAD
   width: 50%;
 }
-=======
-  width: 50%; 
-} *?
->>>>>>> branch1
 /* member.html ================================================================================*/
 .card-title {
   color: silver;
@@ -100,8 +87,6 @@ img {
 
 button {
   width: 100%;
-<<<<<<< HEAD
-=======
 }
 /* sign up form ===================================== */
 
@@ -114,7 +99,6 @@ button {
   color: silver;
   opacity: 80%;
   border-radius: 10px;
->>>>>>> branch1
 }
 h2 {
   color: silver;
@@ -122,9 +106,6 @@ h2 {
 
 /* Responsiveness =============================================================*/
 
-<<<<<<< HEAD
-/* sign up form ===================================== */
-=======
 @media (max-width: 768px) {
   .card-1 {
     margin: 65px;
@@ -140,7 +121,6 @@ h2 {
   }
 }
 /* sign up form */
->>>>>>> branch1
 
 .container-signUp {
   background-color: black;
@@ -156,23 +136,6 @@ h2 {
   color: silver;
 }
 
-<<<<<<< HEAD
-/* Responsiveness =============================================================*/
-
-@media (max-width: 768px) {
-  .card-1 {
-    margin: 65px;
-  }
-  .container-signUp {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 640px) {
-  .card-1 {
-    margin-left: 40px;
-  }
-=======
 .button {
   color: white;
 }
@@ -187,5 +150,4 @@ h2 {
 
 .input-group-text {
   min-width: 10px;
->>>>>>> branch1
 }
