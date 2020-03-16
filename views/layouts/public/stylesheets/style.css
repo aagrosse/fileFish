@@ -1,0 +1,123 @@
+/* handle bars css stylesheet */ /* main body =================================================================== */
+nav {
+  background-color: black;
+  height: 60px;
+  padding-top: 18px;
+  opacity: 80%;
+  border-top: solid blue 5px;
+  border-left: solid blue 5px;
+  border-right: solid blue 5px;
+}
+.nav-link {
+  float: right;
+  margin: 10px;
+}
+
+body {
+  background-image: url(https://wiswimacademy.com/wp-content/uploads/2016/09/iStock_78650427_XLARGE.jpg);
+}
+.jumbotron {
+  text-align: center;
+  background-color: rgb(181, 229, 233);
+  border: solid 5px blue;
+  opacity: 70%;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+h6 {
+  font-size: large;
+}
+.card {
+  background-color: rgb(181, 229, 233);
+  border-radius: 10px;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
+}
+
+.card2 {
+  float: left;
+}
+
+.card3 {
+  float: right;
+}
+
+.logo {
+  margin-top: 20px;
+  max-height: 150px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* member.html ================================================================================*/
+.card-title {
+  color: silver;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.card-text {
+  margin: 10px;
+  text-align: center;
+}
+.card-body {
+  color: silver;
+  padding: 24px;
+  margin-right: 0px;
+}
+
+.card-1 {
+  float: left;
+  margin: 120px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+img {
+  height: 160px;
+  width: 180px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+button {
+  width: 100%;
+}
+
+/* sign up form ===================================== */
+
+.container-signUp {
+  background-color: black;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  padding: 10px;
+  color: silver;
+  opacity: 80%;
+  border-radius: 10px;
+}
+h2 {
+  color: silver;
+}
+
+/* Responsiveness =============================================================*/
+
+@media (max-width: 768px) {
+  .card-1 {
+    margin: 65px;
+  }
+  .container-signUp {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-1 {
+    margin-left: 40px;
+  }
+}
