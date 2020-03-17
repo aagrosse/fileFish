@@ -4,24 +4,30 @@ $(document).ready(function() {
     // exhibitContainer holds all of our exhibits
     let exhibitContainer = $(".exh-container");
     let ExhibitCategorySelect = $("#category");
+    let nameContainer = $(".name-container");
+    let nameList = $("tbody");
     // Click events for the edit and delete buttons
     $(document).on("click", "button.delete", handleExhibitDelete);
     $(document).on("click", "button.edit", handleExhibitEdit);
     // Variable to hold our exhibits
     let exhibits;
+
+      // Getting the initial list of Names
+      getNames();
+  
     
     // The code below handles the case where we want to get exhibits for a specific name
     // Looks for a query param in the url for NameId
-    let url = window.location.search;
-    let nameId;
-    if (url.indexOf("?NameId=") !== -1) {
-      nameId = url.split("=")[1];
-      getExhibits(nameId);
-    }
-    // If there's no nameId we just get all exhibits as usual
-    else {
-      getExhibits();
-    }
+    // let url = window.location.search;
+    // let nameId;
+    // if (url.indexOf("?NameId=") !== -1) {
+    //   nameId = url.split("=")[1];
+    //   getExhibits(nameId);
+    // }
+    // // If there's no nameId we just get all exhibits as usual
+    // else {
+    //   getExhibits();
+    // }
     
     
     // This function grabs exhibits from the database and updates the view
@@ -30,7 +36,7 @@ $(document).ready(function() {
         if (nameId) {
           nameId = "/?NameId=" + nameId;
         }
-        $.get("/api/namess" + authorId, data => {
+        $.get("/api/names" + nameId, data => {
           console.log("Exhibits", data);
           exhibits = data;
           if (!exhibits || !exhibits.length) {
@@ -137,6 +143,79 @@ $(document).ready(function() {
         "'>here</a> in order to get started.");
         exhibitContainer.append(messageH2);
       }
+
+        // Function for creating a new list row for names
+        function createNameRow(nameData) {
+            let newTr = $("<tr>");
+            newTr.data("exhibits", nameData);
+            newTr.append("<td>" + date(nameData.createdAt) + "</td>");
+            newTr.append("<td> " + nameData.temperature + "</td>");
+            newTr.append("<td> " + nameData.PH + "</td>");
+            newTr.append("<td> " + nameData.salinity + "</td>");
+            newTr.append("<td> " + nameData.disolvedOxygen + "</td>");
+            newTr.append("<td> " + nameData.alkalinity + "</td>");
+            newTr.append("<td> " + nameData.ammonia + "</td>");
+            newTr.append("<td> " + nameData.nitrite + "</td>");
+            newTr.append("<td> " + nameData.nitrate + "</td>");
+            newTr.append("<td> " + nameData.iodine + "</td>");
+            newTr.append("<td> " + nameData.calcium + "</td>");
+            newTr.append("<td><a style='cursor:pointer;color:red' class='delete-name'>Delete Data</a></td>");
+            return newTr;
+          }
+
+          "2020-03-14T12:20:33.000Z"
+
+          function date(x){
+            var parts = x.split('-');
+            var day = parts[2].split('',2);
+            var newDate = parts[1]+'/'+day[0]+day[1]+'/'+parts[0];
+            return newDate
+          }
+
+
+          //function i didnt use but i want to keep
+// function convertDate (x) {
+// var parts = x.split('-');
+// var day = parts[2].split('',2);
+// var newdate = parts[1]+'/'+day[0]+day[1]+'/'+parts[0];
+
+// console.log(x)
+// }
+
+        
+          // Function for retrieving names and getting them ready to be rendered to the page
+          function getNames() {
+            $.get("/api/exhibits", data => {
+              let rowsToAdd = [];
+              for (let i = 0; i < data.length; i++) {
+                rowsToAdd.push(createNameRow(data[i]));
+              }
+              renderNameList(rowsToAdd);
+              nameInput.val("");
+            });
+          }
+        
+          // A function for rendering the list of exhibits to the page
+          function renderNameList(rows) {
+            let nameList = $("tbody");
+            nameList.children().not(":last").remove();
+            nameContainer.children(".alert").remove();
+            if (rows.length) {
+              console.log(rows);
+              nameList.prepend(rows);
+            }
+            else {
+              renderEmpty();
+            }
+          }
+        
+          // Function for handling what to render when there are no names
+          function renderEmpty() {
+            let alertDiv = $("<div>");
+            alertDiv.addClass("alert alert-danger");
+            alertDiv.text("You must add data for this system.");
+            nameContainer.append(alertDiv);
+          }
     
     });
   

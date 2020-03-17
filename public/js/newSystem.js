@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(document).on("submit", "#name-form", handleNameFormSubmit);
     $(document).on("click", ".delete-name", handleDeleteButtonPress);
   
-    // Getting the initial list of Authors
+    // Getting the initial list of Names
     getNames();
   
     // A function to handle what happens when the form is submitted to create a new Author
