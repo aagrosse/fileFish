@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	const Exhibits = sequelize.define("Exhibits", {
+	const Exhibits = sequelize.define('Exhibits', {
 		temperature: {
 			type: DataTypes.DECIMAL(6, 1),
 			allowNull: false
@@ -70,7 +70,7 @@ module.exports = function(sequelize, DataTypes) {
 	});
 
 	Exhibits.associate = function(models) {
-		// We're saying that a Exhibits should belong to a Name
+		// We're saying that an Exhibits should belong to a Name
 		// A Exhibit can't be created without a name due to the foreign key constraint
 		Exhibits.belongsTo(models.Names, {
 			foreignKey: {

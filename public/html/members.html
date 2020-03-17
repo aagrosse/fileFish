@@ -20,28 +20,55 @@
 </head>
 
 <body>
+  <nav class="nav">
+    <a class="nav-link" href="/public//html/members.html">Home</a>
+    <a class="nav-link" href="/public/html/signup.html">Sign Up</a>
+    <a class="nav-link" href="/public/html/addData.html">Add Data</a>
+    <a class="nav-link" href="/public/html/searchData.html">Search Data</a>
+    <a class="nav-link" href="/public/html/newSystem.html">New System</a>
+    <a class="nav-link" href="/public/html/login.html">Log In</a>
+  </nav>
+
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Welcome to FileFish</h1>
-      <h6>please select where you would like to be directed</h6>
+
+      <img class="logo" src="../img/filefish.png">
+      <h6>Please select where you would like to be directed</h6>
     </div>
   </div>
-  <div class="container-button justify-content-center">
 
-    <div>
+  <div class="card-1" style="width: 24rem;">
+    <img src="https://icons.iconarchive.com/icons/uriy1966/steel-system/512/Search-icon.png" class="card-img-top"
+      alt="...">
+    <div class="card-body">
       <button type="button" id="search-system" class="btn btn-primary btn-lg">Search for System</button>
     </div>
-    <div>
+  </div>
+
+  <div class="card-1" style="width: 24rem;">
+    <img src="https://icons.iconarchive.com/icons/icojam/blue-bits/256/database-add-icon.png" class="card-img-top"
+      alt="...">
+    <div class="card-body">
       <button type="button" id="update-system" class="btn btn-primary btn-lg">Add Data to Existing System</button>
     </div>
-    <div>
+  </div>
+
+
+
+  <div class="card-1" style="width: 24rem;">
+    <img src="https://cdn3.iconfinder.com/data/icons/UltimateGnome/256x256/apps/gnome-system-config.png"
+      class="card-img-top" alt="...">
+    <div class="card-body">
       <button type="button" id="new-system" class="btn btn-primary btn-lg">Enter a new System</button>
     </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
   </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+
 
 </body>
 
