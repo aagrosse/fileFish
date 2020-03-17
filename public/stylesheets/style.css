@@ -27,7 +27,7 @@ body {
 h6 {
 	font-size: large;
 }
-/* .card {
+.card {
   background-color: rgb(181, 229, 233);
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
@@ -51,8 +51,8 @@ h6 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%; 
-} *?
+  width: 50%;
+}
 /* member.html ================================================================================*/
 .card-title {
 	color: silver;
