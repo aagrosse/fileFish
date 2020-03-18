@@ -1,42 +1,23 @@
 
 
-
-
-  <nav class="nav">
+    <nav class="nav">
     <a class="nav-link" href="/members">Home</a>
-    <a class="nav-link" href="/signup">Sign Up</a>
     <a class="nav-link" href="/addData">Add Data</a>
-    <a class="nav-link" href="/searchData">Search Data</a>
-    <a class="nav-link" href="/newSystem">New System</a>
-    <a class="nav-link" href="/login">Log In</a>
-    <a class="nav-link" href="/index">Landing Page</a>
-  </nav>
+    
+    <a class="nav-link" href="newSystem">New System</a>
+</nav>
 
 
     <div class="header">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">EXHIBITS</h1>
-                <p class="lead">
-                    Select a database to view the water parameters
-                </p>
 
-                <div class="btn-group">
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Select an exhibit to view
-                    </button>
-                    <div class="dropdown-menu">
-
-                        {{#each exhibits}}
-
-                        <a class="dropdown-item" href="#">
-                            {{name}}
-                        </a>
-                        <div class="dropdown-divider"></div>
-
-                        {{/each}}
-
+                <div class="card-body center">
+                    <div class="form-group">
+                        <label for="category">Select System:</label>
+                        <select class="custom-select" id="designation">
+                        </select>
                     </div>
                 </div>
 
@@ -47,36 +28,38 @@
     </div>
 
     <div class="card card-body col-md-10 offset-md-1">
-   <div class="row">
-			<div class="col-md-10 offset-md-1">
-				<div class="name-container">
-					<h1>Systems</h1>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>System</th>
-								<th>Temp(F)</th>
-								<th>PH</th>
-								<th>Salinity</th>
-								<th>DO</th>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="name-container">
+                    <h1>System Parameters</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temp(F)</th>
+                                <th>PH</th>
+                                <th>Salinity</th>
+                                <th>DO</th>
                                 <th>Alk</th>
                                 <th>Ammonia</th>
                                 <th>Nitrite</th>
                                 <th>Nitrate</th>
                                 <th>Iodine</th>
                                 <th>Calcium</th>
-							</tr>
-						</thead>
-					
-					</table>
-				</div>
-			</div>
-		</div>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
         </div>
+    </div>
 
 
 
 
     <script src="public/js/searchData.js" async defer></script>
-
-
