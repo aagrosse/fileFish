@@ -8,6 +8,8 @@ $(document).ready(function () {
     // Click events for the edit and delete buttons
     $(document).on("click", ".delete-name", handleExhibitDelete);
     $(document).on("click", "button.edit", handleExhibitEdit);
+    //change event for the exhibit select control
+    $("#designation").change(getExhibits);
     // Variable to hold our exhibits
     let exhibits;
     let url = window.location.search;
@@ -30,28 +32,6 @@ $(document).ready(function () {
 
     getExhibits();
 
-
-    // The code below handles the case where we want to get exhibits for a specific name
-    // Looks for a query param in the url for NameId
-
-
-    // This function grabs exhibits from the database and updates the view
-    function getExhibits(name) {
-        nameId = name || "";
-        if (nameId) {
-            nameId = "/?NameId=" + nameId;
-        }
-        $.get("/api/names" + nameId, data => {
-            console.log("Exhibits", data);
-            exhibits = data;
-            if (!exhibits || !exhibits.length) {
-                displayEmpty(name);
-            }
-            else {
-                initializeRows();
-            }
-        });
-    }
 
     // This function does an API call to delete exhibits
     function deleteExhibit(id) {
@@ -141,9 +121,36 @@ $(document).ready(function () {
     }
 
 
+    
+    // The code below handles the case where we want to get exhibits for a specific name
+    // Looks for a query param in the url for NameId
+
+
+    // // This function grabs exhibits from the database and updates the view
+    // function getExhibits() {
+    //     console.log("getExhibits!");
+        
+    //     $.get("/api/exhibits" + nameId, data => {
+    //         console.log("Exhibits", data);
+    //         exhibits = data;
+    //         if (!exhibits || !exhibits.length) {
+    //             displayEmpty(name);
+    //         }
+    //         else {
+    //             initializeRows();
+    //         }
+    //     });
+    // }
+
+
 
     // Function for retrieving exhibits and getting them ready to be rendered to the page
-    function getExhibits() {
+    function getExhibits(name) {
+        console.log("getExhibits 2!")
+        nameId = name || "";
+        if (nameId) {
+            nameId = "/?NameId=" + nameId;
+        }
         $.get("/api/exhibits", data => {
             let rowsToAdd = [];
             for (let i = 0; i < data.length; i++) {

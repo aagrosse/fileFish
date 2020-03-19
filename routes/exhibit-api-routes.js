@@ -4,7 +4,7 @@ const db = require("../models");
 //Routes
 module.exports = function (app) {
 
-  // GET route for getting all of the posts
+  // GET route for getting all of the exhibits from the name (system) selected
   app.get("/api/exhibits", (req, res) => {
     let query = {};
     //We use new way to pass optional parameters here: req.query
@@ -16,7 +16,7 @@ module.exports = function (app) {
     }
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
+    // In this case, just db.Names
     db.Exhibits.findAll({
       where: query,
       include: [db.Names]
