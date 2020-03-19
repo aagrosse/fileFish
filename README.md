@@ -13,7 +13,7 @@ _Visit the live app_ [App](https://file-fish.herokuapp.com/)
 
 # Description
 
-This app will allow you to record, retrieve, edit & delete water peremeters for any size of aquarium facility.
+This app will allow you to record, retrieve, edit & delete water parameters for any size of aquarium facility.
 It uses an Oracle powered MySQL database that is secure and dependable.
 
 ![photo of project]()
