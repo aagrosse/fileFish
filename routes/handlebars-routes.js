@@ -5,8 +5,8 @@ const express = require('express');
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
-	app.get("/", function(req, res) {
+module.exports = function (app) {
+	app.get("/", function (req, res) {
 		// If the user already has an account send them to the members page
 		if (req.user) {
 			console.log("above members: handlebars-routes");
@@ -16,7 +16,7 @@ module.exports = function(app) {
 		res.render("signup");
 	});
 
-	app.get("/login", function(req, res) {
+	app.get("/login", function (req, res) {
 		console.log("in handlebars-routes: login");
 		// If the user already has an account send them to the members page
 		if (req.user) {
@@ -27,26 +27,26 @@ module.exports = function(app) {
 
 	// Here we've add our isAuthenticated middleware to this route.
 	// If a user who is not logged in tries to access this route they will be redirected to the signup page
-	app.get("/members", isAuthenticated, function(req, res) {
+	app.get("/members", isAuthenticated, function (req, res) {
 		res.render("members");
 	});
 
 	// routing to new system page
-	app.get("/newSystem", function(req, res) {
+	app.get("/newSystem", function (req, res) {
 		res.render("newSystem");
 	});
 
 	// routing to add Data page
-	app.get("/addData", function(req, res) {
+	app.get("/addData", function (req, res) {
 		res.render("addData");
 	});
 
 	// routing to add Data page
-	app.get("/searchData", function(req, res) {
+	app.get("/searchData", function (req, res) {
 		res.render("searchData");
 	});
 
 	app.use("/public", express.static('public'));
 
-	
+
 };
