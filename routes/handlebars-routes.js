@@ -1,15 +1,16 @@
-// Requiring path to so we can use relative routes to our HTML files
+// Requiring path to so we can use relative routes to our HTML files;
 const path = require('path');
 const express = require('express');
+const db = require('../models');
 
-// Requiring our custom middleware for checking if a user is logged in
+// Requiring our custom middleware for checking if a user is logged in;
 var isAuthenticated = require('../config/middleware/isAuthenticated');
 
 module.exports = function(app) {
 	app.get('/', function(req, res) {
 		// If the user already has an account send them to the members page
 		if (req.user) {
-			console.log('above members: handlebars-routes');
+			// console.log('above members: handlebars-routes');
 			res.render('members');
 		}
 
@@ -17,7 +18,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/login', function(req, res) {
-		console.log('in handlebars-routes: login');
+		// console.log('in handlebars-routes: login');
 		// If the user already has an account send them to the members page
 		if (req.user) {
 			res.render('members');
@@ -42,11 +43,6 @@ module.exports = function(app) {
 	});
 
 	// routing to add Data page
-	app.get('/searchData', function(req, res) {
-		res.render('searchData');
-	});
-
-	// route & json exhibits, for the dropdown on the searchData page.
 	app.get('/searchData', function(req, res) {
 		db.Names.findAll({})
 			.then(function(exhibitNames) {
