@@ -1,5 +1,4 @@
-/* handle bars css stylesheet */ /* main body =================================================================== */
-
+/* handle bars css stylesheet */
 /* navbar */
 nav {
   background-color: black;
@@ -16,9 +15,9 @@ body {
 }
 .jumbotron {
   text-align: center;
-  background-color: rgb(181, 229, 233);
+  background-color: rgba(181, 229, 233, 0.603);
   border: solid 5px blue;
-  opacity: 70%;
+
   color: black;
   font-family: "Times New Roman", Times, serif;
   padding-bottom: 0px;
@@ -93,12 +92,7 @@ img.logo {
 
 /*
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-} */
+
 /* member.html ================================================================================*/
 
 .card-body {
@@ -129,74 +123,3 @@ button {
   width: 100%;
   height: 100%;
 }
-/* sign up form ===================================== */
-
-/* .container-signUp {
-  background-color: black;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 10px;
-  color: silver;
-  opacity: 80%;
-  border-radius: 10px;
-}
-h2 {
-  color: silver;
-} */
-
-/* Responsiveness =============================================================*/
-/* @media (max-width: 320px) {
-  .card-1 {
-    margin: 0px;
-  }
-}
-/* */
-/* @media (max-width: 768px) {
-  .card-1 {
-    margin-left: 100px;
-  }
-  .container-signUp {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 640px) {
-  .card-1 {
-    margin-left: 100px;
-  }
-  img.card-img-top {
-    width: auto;
-  }
-} */
-/* sign up form */
-
-/* .container-signUp {
-  background-color: black;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 10px;
-  color: silver;
-  opacity: 80%;
-  border-radius: 10px;
-}
-h2 {
-  color: silver;
-} */
-
-/* .button {
-  color: white;
-} */
-
-/* .card {
-  background-color: rgb(181, 229, 233) !important;
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
-  margin-bottom: 50px;
-}
-
-.input-group-text {
-  min-width: 10px; 
-}*/
