@@ -14,11 +14,15 @@
                 <h1 class="display-4">EXHIBITS</h1>
 
                 <div class="card-body center">
-                    <div class="form-group">
-                        <label for="category">Select System:</label>
-                        <select class="custom-select" id="designation">
-                        </select>
-                    </div>
+                    {{#each exhibitNames}}
+
+                        <a class="dropdown-item" href="#">
+                            {{name}}
+                        </a>
+                        <div class="dropdown-divider">
+                        </div>
+
+                    {{/each}}
                 </div>
 
             </div>
