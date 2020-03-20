@@ -1,8 +1,8 @@
 // global moment 
 $(document).ready(function () {
 
-    // exhibitContainer holds all of our exhibits
-    let exhibitContainer = $(".exh-container");
+    
+    
     let nameContainer = $(".name-container");
     let nameSelect = $("#designation");
     // Click events for the edit and delete buttons
@@ -11,7 +11,6 @@ $(document).ready(function () {
     //change event for the exhibit select control
     $("#designation").change(getExhibits);
     // Variable to hold our exhibits
-    let exhibits;
     let url = window.location.search;
     let exhibitId;
     let nameId;
@@ -30,8 +29,6 @@ $(document).ready(function () {
     // Getting the initial list of Names
     getNames();
 
-    getExhibits();
-
 
     // This function does an API call to delete exhibits
     function deleteExhibit(id) {
@@ -43,18 +40,6 @@ $(document).ready(function () {
                 getExhibits();
                 window.location.href = "/searchData"
             });
-    }
-
-    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
-    function initializeRows() {
-        exhibitContainer.empty();
-        let exhibitsToAdd = [];
-        for (let i = 0; i < exhibits.length; i++) {
-            if (exhibits[i].NameId === nameSelect.val()) {
-                exhibitsToAdd.push(createNewRow(exhibits[i]));
-            }
-        }
-        exhibitContainer.append(exhibitsToAdd);
     }
 
     // This function figures out which exhibit we want to delete and then calls deletePost
@@ -77,20 +62,6 @@ $(document).ready(function () {
         window.location.href = "/addData?id=" + currentExhibit.id;
     }
 
-    // This function displays a message when there are no exhibits
-    function displayEmpty(id) {
-        let query = window.location.search;
-        let partial = "";
-        if (id) {
-            partial = " for designation #" + id;
-        }
-        exhibitContainer.empty();
-        let messageH2 = $("<h2>");
-        messageH2.css({ "text-align": "center", "margin-top": "50px" });
-        messageH2.html("No entries yet" + partial + ", navigate <a href='/cms" + query +
-            "'>here</a> in order to get started.");
-        exhibitContainer.append(messageH2);
-    }
 
     // Function for creating a new list row for names
     function createExhibitRow(nameData) {
@@ -121,49 +92,30 @@ $(document).ready(function () {
     }
 
 
-    
-    // The code below handles the case where we want to get exhibits for a specific name
-    // Looks for a query param in the url for NameId
-
-
-    // // This function grabs exhibits from the database and updates the view
-    // function getExhibits() {
-    //     console.log("getExhibits!");
-        
-    //     $.get("/api/exhibits" + nameId, data => {
-    //         console.log("Exhibits", data);
-    //         exhibits = data;
-    //         if (!exhibits || !exhibits.length) {
-    //             displayEmpty(name);
-    //         }
-    //         else {
-    //             initializeRows();
-    //         }
-    //     });
-    // }
-
-
 
     // Function for retrieving exhibits and getting them ready to be rendered to the page
-    function getExhibits(name) {
-        console.log("getExhibits 2!")
-        nameId = name || "";
-        if (nameId) {
-            nameId = "/?NameId=" + nameId;
-        }
+    function getExhibits() {
+        console.log(nameSelect.val())
+
         $.get("/api/exhibits", data => {
             let rowsToAdd = [];
             for (let i = 0; i < data.length; i++) {
-                rowsToAdd.push(createExhibitRow(data[i]));
+                if (data[i].NameId === parseInt(nameSelect.val())) {
+                    rowsToAdd.push(createExhibitRow(data[i]));
+                }
+
+
             }
             renderExhibitList(rowsToAdd);
 
         });
     }
 
+
     // A function for rendering the list of exhibits to the page
     function renderExhibitList(rows) {
         let nameList = $("tbody");
+        nameList.empty();
         nameList.children().not(":last").remove();
         nameContainer.children(".alert").remove();
         if (rows.length) {
