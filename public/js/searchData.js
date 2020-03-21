@@ -14,19 +14,6 @@ $(document).ready(function() {
 	// Getting the initial list of Names
 	getNames();
 
-	// The code below handles the case where we want to get exhibits for a specific name
-	// Looks for a query param in the url for NameId
-	// let url = window.location.search;
-	// let nameId;
-	// if (url.indexOf("?NameId=") !== -1) {
-	//   nameId = url.split("=")[1];
-	//   getExhibits(nameId);
-	// }
-	// // If there's no nameId we just get all exhibits as usual
-	// else {
-	//   getExhibits();
-	// }
-
 	// This function grabs exhibits from the database and updates the view through handlebars-routes.js app.get('/searchData')
 	function getExhibits(name) {
 		nameId = name || '';
