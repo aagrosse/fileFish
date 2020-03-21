@@ -6,8 +6,10 @@ const db = require('../models');
 // Requiring our custom middleware for checking if a user is logged in;
 var isAuthenticated = require('../config/middleware/isAuthenticated');
 
+
 module.exports = function(app) {
 	app.get('/', function(req, res) {
+
 		// If the user already has an account send them to the members page
 		if (req.user) {
 			// console.log('above members: handlebars-routes');
@@ -17,8 +19,10 @@ module.exports = function(app) {
 		res.render('signup');
 	});
 
-	app.get('/login', function(req, res) {
-		// console.log('in handlebars-routes: login');
+
+	app.get("/login", function (req, res) {
+		console.log("in handlebars-routes: login");
+
 		// If the user already has an account send them to the members page
 		if (req.user) {
 			res.render('members');
@@ -28,38 +32,32 @@ module.exports = function(app) {
 
 	// Here we've add our isAuthenticated middleware to this route.
 	// If a user who is not logged in tries to access this route they will be redirected to the signup page
-	app.get('/members', isAuthenticated, function(req, res) {
-		res.render('members');
+  
+	app.get("/members", isAuthenticated, function (req, res) {
+		res.render("members");
 	});
 
 	// routing to new system page
-	app.get('/newSystem', function(req, res) {
-		res.render('newSystem');
+	app.get("/newSystem", function (req, res) {
+		res.render("newSystem");
 	});
 
 	// routing to add Data page
-	app.get('/addData', function(req, res) {
-		res.render('addData');
+	app.get("/addData", function (req, res) {
+		res.render("addData");
 	});
 
 	// routing to add Data page
-	app.get('/searchData', function(req, res) {
-		db.Names.findAll({})
-			.then(function(exhibitNames) {
-				res.render('searchData', { exhibitNames: exhibitNames });
-				console.log(`EXHIBIT NAMES *******`, exhibitNames);
-			})
-			.catch(err => {
-				// throw err;
-				console.log(err);
-			});
-		// sending back data-obj from the searchData route in mySql;
+	app.get("/searchData", function (req, res) {
+		res.render("searchData");
+
 	});
 
 	// route for displaying selected exhibit
 	app.get('/api/exhibit/:selectedExhibit', function(req, res) {
 		// tying to get the selected exhibit to find the foreign key and display all values from that table column back on the handlebars page;
 		let selectedExhibit = req.params.selectedExhibit;
+
 
 		console.log(selectedExhibit);
 
@@ -91,4 +89,5 @@ module.exports = function(app) {
 	});
 
 	app.use('/public', express.static('public'));
+
 };
