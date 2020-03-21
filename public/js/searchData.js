@@ -14,17 +14,7 @@ $(document).ready(function () {
     let url = window.location.search;
     let exhibitId;
     let nameId;
-
-    // If we have this section in our url, we pull out the post id from the url
-    // In '?ExhibitId=1', ExhibitId is 1
-    if (url.indexOf("?ExhibitId=") !== -1) {
-        exhibitId = url.split("=")[1];
-        getPostData(exhibitId, "exhibit");
-    }
-    // Otherwise if we have an NameId in our url, preset the name select box to be our Name
-    else if (url.indexOf("?NameId=") !== -1) {
-        nameId = url.split("=")[1];
-    }
+  
 
     // Getting the initial list of Names
     getNames();
