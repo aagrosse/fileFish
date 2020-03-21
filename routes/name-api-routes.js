@@ -1,12 +1,12 @@
 const db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
 
-//Finds all
+  //Finds all
   app.get("/api/names", (req, res) => {
     db.Names.findAll({
       include: [db.Exhibits]
-    }).then(function(dbName) {
+    }).then(function (dbName) {
       res.json(dbName);
     });
   });
@@ -21,24 +21,24 @@ module.exports = function(app) {
       }
       ,
       include: [db.Exhibits]
-    }).then(function(dbName) {
+    }).then(function (dbName) {
       console.log(dbName);
       res.json(dbName);
     });
   });
 
   app.post("/api/names", (req, res) => {
-    db.Names.create(req.body).then(function(dbName) {
+    db.Names.create(req.body).then(function (dbName) {
       res.json(dbName);
     });
   });
 
   app.delete("/api/names/:id", (req, res) => {
-    db.Author.destroy({
+    db.Names.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbName) {
+    }).then(function (dbName) {
       res.json(dbName);
     });
   });
