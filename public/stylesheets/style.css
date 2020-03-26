@@ -14,20 +14,20 @@ nav {
 /* general================================================================ */
 
 body {
-<<<<<<< HEAD
-  background-image: "public/img/bait.jpg";
-=======
-  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/04/Aquarium-Background-Wallpaper.jpg);
->>>>>>> ea409eb5803c4e02847eaf03ed509ff9ce879534
+  background-image: url('/public/img/bait.jpg');
+  background-size: cover;
 }
+
 .jumbotron.jumbotron {
   text-align: center;
   background-color: rgba(181, 229, 233, 0.925);
-  border: solid 5px blue;
+  /* border: solid 5px blue; */
   color: black;
   font-family: "Times New Roman", Times, serif;
   padding: 10px;
   margin-bottom: 0px;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 /* seach data ====================================================================*/
@@ -48,12 +48,8 @@ table {
 
 /* .container-dataClass {
   overflow-x: scroll;
-<<<<<<< HEAD
-} */
-=======
   width: 100%;
 }
->>>>>>> ea409eb5803c4e02847eaf03ed509ff9ce879534
 
 .card.card-body {
   background-color: transparent;
@@ -67,11 +63,8 @@ span {
   color: black;
 }
 .card.center {
-  margin: 20%;
-  margin-top: 0px;
+  margin-top: 2%;
   justify-content: center;
-  background-color: black;
-  color: silver;
   border-radius: 10px;
 }
 .card-title {
@@ -90,7 +83,7 @@ img.logo {
   max-height: 150px;
 }
 .card {
-  background-color: rgb(181, 229, 233);
+  background-color: rgb(181, 229, 233) !important;
   border-radius: 10px;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
     0 8px 20px 1px rgba(0, 0, 0, 0.19);
@@ -99,9 +92,9 @@ img.logo {
 /* member.html ================================================================================*/
 
 .card-body {
-  color: silver;
   padding: 24px;
-  margin: 10px;
+  margin: 20px;
+  opacity: 50;
 }
 
 .card-1 {
@@ -109,9 +102,12 @@ img.logo {
   margin-left: 80px;
   margin-top: 40px;
   margin-right: 80px;
+  margin-bottom: 40px;
   background-color: black;
   border-radius: 10px;
   height: 24rem;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 img.card-img-top {
@@ -130,7 +126,6 @@ button {
   width: 100%;
   height: 100%;
 }
-<<<<<<< HEAD
 
 .center {
   display: block;
@@ -138,7 +133,6 @@ button {
   margin-right: auto;
   width: 50%;
 }
-=======
 .container-icon {
   margin: 10px;
 }
@@ -173,4 +167,3 @@ video {
 }
 @media (max-width: 320px) {
 } */
->>>>>>> ea409eb5803c4e02847eaf03ed509ff9ce879534
