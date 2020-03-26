@@ -67,7 +67,6 @@ module.exports = function(app) {
 			}
 		})
 			.then(function(nameData) {
-				// res.render('searchData', { nameData: nameData });
 				console.log(`****** EXHIBIT NAME VALUES *******`, nameData);
 				// return will pass id to the next .then();
 				return nameData.id;
