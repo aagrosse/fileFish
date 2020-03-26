@@ -26,7 +26,7 @@ $(document).ready(function () {
   // In '?ExhibitId=1', ExhibitId is 1
   if (url.indexOf("?ExhibitId=") !== -1) {
     exhibitId = url.split("=")[1];
-    getPostData(exhibitId, "exhibit");
+    getExhibitData(exhibitId, "exhibit");
   }
   // Otherwise if we have an NameId in our url, preset the name select box to be our Name
   else if (url.indexOf("?NameId=") !== -1) {
