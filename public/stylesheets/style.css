@@ -107,6 +107,7 @@ img.logo {
 
 .card-1 {
 	float: left;
+}
 
 	margin-top: 40px;
 
@@ -114,6 +115,9 @@ img.logo {
 	background-color: black;
 	border-radius: 10px;
 	height: 24rem;
+
+	width: 18rem;
+
 	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
 		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
