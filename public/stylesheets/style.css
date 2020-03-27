@@ -2,18 +2,20 @@
 /* navbar ================================================================*/
 
 nav {
-	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.9);
 	height: 60px;
 }
 
 .nav-link {
 	margin: 10px;
-	font-size: 17px !important;
+  font-size: 17px !important;
+  color: rgb(23,162,184);
 }
 
 /* general================================================================ */
 
 body {
+<<<<<<< HEAD
 	background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/04/Aquarium-Background-Wallpaper.jpg);
 	background-size: cover;
 	min-width: 100%;
@@ -30,6 +32,25 @@ body {
 	font-family: 'Times New Roman', Times, serif;
 	padding: 10px;
 	margin-bottom: 0px;
+=======
+  background-image: url('/public/img/baitball.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+.jumbotron.jumbotron {
+  text-align: center;
+  background-color: rgba(181, 229, 233, 0.925);
+  border: solid 5px rgb(23,162,184);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  margin-bottom: 0px;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
+>>>>>>> d958cdf714789d4db4b70e07b9a1b1cc65360a18
 }
 
 /* seach data ====================================================================*/
@@ -48,9 +69,9 @@ table {
 	background-color: whitesmoke;
 }
 
-.container-dataClass {
-	overflow-x: scroll;
-	width: 100%;
+/* .container-dataClass {
+  overflow-x: scroll;
+  width: 100%;
 }
 
 .card.card-body {
@@ -65,12 +86,18 @@ span {
 	color: black;
 }
 .card.center {
+<<<<<<< HEAD
 	margin: 20%;
 	margin-top: 50px;
 	justify-content: center;
 	background-color: black;
 	color: silver;
 	border-radius: 10px;
+=======
+  margin-top: 2%;
+  justify-content: center;
+  border-radius: 10px;
+>>>>>>> d958cdf714789d4db4b70e07b9a1b1cc65360a18
 }
 .card-title {
 	margin: 10px;
@@ -88,10 +115,10 @@ img.logo {
 	max-height: 150px;
 }
 .card {
-	background-color: rgb(181, 229, 233);
-	border-radius: 10px;
-	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-		0 8px 20px 1px rgba(0, 0, 0, 0.19);
+  background-color: rgb(181, 229, 233) !important;
+  border-radius: 10px;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 /* member.html ================================================================================*/
@@ -105,17 +132,22 @@ img.logo {
 }
 
 .card-body {
-	color: silver;
-	padding: 24px;
-	margin: 10px;
+  padding: 24px;
+  margin: 20px;
+  opacity: 50;
 }
 
 .card-1 {
-	width: 20rem;
-	margin-top: 40px;
-	background-color: black;
-	border-radius: 10px;
-	height: 24rem;
+  float: left;
+  
+  margin-top: 40px;
+  
+  margin-bottom: 40px;
+  background-color: black;
+  border-radius: 10px;
+  height: 24rem;
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+    0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 img.card-img-top {
@@ -135,6 +167,12 @@ button {
 	height: 100%;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .container-icon {
 	margin: 10px;
 }
