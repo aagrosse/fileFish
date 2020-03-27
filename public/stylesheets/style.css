@@ -8,30 +8,30 @@ nav {
 
 .nav-link {
 	margin: 10px;
-  font-size: 17px !important;
-  color: rgb(23,162,184);
+	font-size: 17px !important;
+	color: rgb(23, 162, 184);
 }
 
 /* general================================================================ */
 
 body {
-  background-image: url('/public/img/baitball.jpg');
-  background-size: cover;
-  height: 100%;
+	background-image: url('/public/img/baitball.jpg');
+	background-size: cover;
+	height: 100%;
 }
 
 .jumbotron.jumbotron {
-  text-align: center;
-  background-color: rgba(181, 229, 233, 0.925);
-  border: solid 5px rgb(23,162,184);
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  color: black;
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
-  margin-bottom: 0px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
+	text-align: center;
+	background-color: rgba(181, 229, 233, 0.925);
+	border: solid 5px rgb(23, 162, 184);
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	color: black;
+	font-family: 'Times New Roman', Times, serif;
+	padding: 10px;
+	margin-bottom: 0px;
+	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 /* seach data ====================================================================*/
@@ -50,14 +50,9 @@ table {
 	background-color: whitesmoke;
 }
 
-/* .container-dataClass {
-  overflow-x: scroll;
-  width: 100%;
-}
-
-.card.card-body {
-	background-color: transparent;
-	padding: 20px;
+.container-dataClass {
+	overflow-x: scroll;
+	width: 100%;
 }
 
 /* add data ==========================================================*/
@@ -67,9 +62,9 @@ span {
 	color: black;
 }
 .card.center {
-  margin-top: 2%;
-  justify-content: center;
-  border-radius: 10px;
+	margin-top: 2%;
+	justify-content: center;
+	border-radius: 10px;
 }
 .card-title {
 	margin: 10px;
@@ -87,10 +82,10 @@ img.logo {
 	max-height: 150px;
 }
 .card {
-  background-color: rgb(181, 229, 233) !important;
-  border-radius: 10px;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
+	background-color: rgb(181, 229, 233) !important;
+	border-radius: 10px;
+	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 /* member.html ================================================================================*/
@@ -104,22 +99,21 @@ img.logo {
 }
 
 .card-body {
-  padding: 24px;
-  margin: 20px;
-  opacity: 50;
+	padding: 24px;
+	margin: 20px;
+	opacity: 50;
 }
 
 .card-1 {
-  float: left;
-  
-  margin-top: 40px;
-  
-  margin-bottom: 40px;
-  background-color: black;
-  border-radius: 10px;
-  height: 24rem;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
-    0 8px 20px 1px rgba(0, 0, 0, 0.19);
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: black;
+	border-radius: 10px;
+	height: 24rem;
+	width: 18rem;
+	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
+		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 img.card-img-top {
@@ -140,10 +134,10 @@ button {
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 .container-icon {
 	margin: 10px;
@@ -166,15 +160,21 @@ video {
 }
 
 .row-signUp {
-  background-color: rgba(181, 229, 233, 0.925);
-  text-align: center;
-  margin-top: 100px;
-  margin-left: 0px;
-  border-radius: 10px;
-  width: 50%;
-  padding: 10px;
+	background-color: rgba(181, 229, 233, 0.925);
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 0px;
+	border-radius: 10px;
+	width: 50%;
+	padding: 10px;
 }
 .container-logIn {
-  margin-left: 35%;
+	margin-left: 35%;
 }
 
+@media (max-width: 450px) {
+	.container-login {
+		margin: 0 auto;
+		width: 100vw;
+	}
+}
