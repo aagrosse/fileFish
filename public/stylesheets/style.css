@@ -1,5 +1,5 @@
 /* handle bars css stylesheet */
-/* navbar ================================================================*/
+/* navbar ================================================================ */
 
 nav {
 	background-color: rgba(0, 0, 0, 0.9);
@@ -12,7 +12,7 @@ nav {
 	color: rgb(23, 162, 184);
 }
 
-/* general================================================================ */
+/* general ================================================================ */
 
 body {
 	background-image: url('/public/img/baitball.jpg');
@@ -34,7 +34,7 @@ body {
 		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
-/* seach data ====================================================================*/
+/* search data ============================================================= */
 
 .row {
 	background: transparent;
@@ -55,12 +55,13 @@ table {
 	width: 100%;
 }
 
-/* add data ==========================================================*/
+/* add data =============================================================== */
 
 span {
 	width: 150px;
 	color: black;
 }
+
 .card.center {
 	margin-top: 2%;
 	justify-content: center;
@@ -88,7 +89,7 @@ img.logo {
 		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
-/* member.html ================================================================================*/
+/* member.html ============================================================= */
 
 .members-options {
 	height: 70vh;
@@ -106,12 +107,17 @@ img.logo {
 
 .card-1 {
 	float: left;
+}
+
 	margin-top: 40px;
+
 	margin-bottom: 40px;
 	background-color: black;
 	border-radius: 10px;
 	height: 24rem;
+
 	width: 18rem;
+
 	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2),
 		0 8px 20px 1px rgba(0, 0, 0, 0.19);
 }
@@ -143,7 +149,7 @@ button {
 	margin: 10px;
 }
 
-/* sign up page================================================================= */
+/* sign up page ============================================================ */
 
 video {
 	position: fixed;
