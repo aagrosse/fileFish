@@ -1,26 +1,22 @@
-# theTrueLemurs2
-
 Project 2
 
-# theTrueLemurs2
+# theTrueLemurs
 
-Project 2
-
-Built with Node, Express, Sequalize
-This app will take in data (types of burgers), log them to a database and allow you to make changes to the information on the database.
-
-_Visit the live app_ [App](https://file-fish.herokuapp.com/)
+<p align="center">
+  <!-- <b>Visit Live Site</b><br> -->
+  <a href="https://file-fish.herokuapp.com/" style="font-size: 45px">File Fish</a> 
+  <br><br>
+  <img src="public/img/fileFish-dashboard.png">
+</p>
 
 # Description
 
-This app will allow you to record, retrieve, edit & delete water parameters for any size of aquarium facility.
-It uses an Oracle powered MySQL database that is secure and dependable.
-
-![photo of project]()
+File Fish is built with JavaScript using Node for the runtime environment, Express to connect to our server, sequelize to template our database & MySQL as our database platform. We are using passport to authenticate a user from the initial window. If the user is authenticated, they will be granted access to the exhibit database & parameters stored in the database. From the members landing page or "dashboard" you are presented with three options; Add a System, Search for a current System or Enter Data on a current system. We give you the option to delete data records as well entire exhibits, if need be.
 
 # About
 
-This is is built with .js, Node.js, Express & MySQL.
+This app will allow you to record, retrieve, edit & delete water parameters for any size of aquarium facility.
+It uses an Oracle powered MySQL database that is secure and dependable.
 
 # Built / Maintained With
 
@@ -32,7 +28,7 @@ This is is built with .js, Node.js, Express & MySQL.
 - Heroku
 - JawsDB
 
-packages/technologies:
+# packages/technologies:
 
 - [Handlebars](https://www.npmjs.com/package/handlebars)
 - [Express](https://www.npmjs.com/package/express)
